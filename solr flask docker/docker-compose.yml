@@ -1,0 +1,25 @@
+version: '3.7'
+
+services:
+  flask-app:
+    image: flask-app:latest
+    container_name: flask-app
+    ports:
+      - 5000:5000
+    networks:
+      - solr
+    depends_on:
+      - solr
+
+  solr:
+    image: solr:8.5
+    container_name: solr
+    ports:
+      - "8983:8983"
+    networks:
+      - solr
+    command:
+      - solr-demo
+
+networks:
+  solr:

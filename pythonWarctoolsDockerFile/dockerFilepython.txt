@@ -1,0 +1,32 @@
+FROM ubuntu:latest
+RUN apt update
+RUN apt install -y sudo
+RUN sudo apt install -y python3-pip
+RUN sudo apt install -y python3
+RUN pip3 --version
+RUN python3 --version
+RUN pip install warctools
+
+
+
+########################################################
+####solo python
+#https://hub.docker.com/_/python
+#https://www.docker.com/blog/containerized-python-development-part-1/
+
+FROM python
+RUN pip --version
+RUN python --version
+RUN pip install warctools
+COPY my_script.py /
+
+
+
+#jcutar
+    docker build -t hello-demo .
+    docker images
+    docker run  hello-demo 
+
+ ##### nota
+    si da error el build cambiar en la conf de engine  de true a  false; "buildkit": false
+   
