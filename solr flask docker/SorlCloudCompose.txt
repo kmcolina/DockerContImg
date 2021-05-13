@@ -1,5 +1,12 @@
+#si da error de credenciales
+#This worked for me. In ~/.docker/config.json, change
+{"credsStore":"desktop.exe"} to {"_credsStore":"desktop.exe"}
+#https://github.com/docker/compose/issues/7495
+
 #crear desde afuera una coleccion 
 #docker exec -it  solr-1  bin/solr create_collection -c gettingstarted2 -shards 3 -replicationFactor 2
+
+
 version: '3.7'
 services:
   solr-1:

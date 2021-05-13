@@ -1,0 +1,22 @@
+#primero hacer 
+docker pull oduwsdl/ipwb
+
+##nota docker run sin comando no funciona
+
+#indexado estructura
+docker container run -it --rm -v /path/to/data:/data oduwsdl/ipwb ipwb index -o /data/cdxj/custom.cdxj /data/warc/custom.warc.gz
+
+# mi path C:\Users\Mochileiros\Desktop:/data
+
+#(indexerar)
+docker container run -it --rm -v C:\Users\Mochileiros\Desktop:/data oduwsdl/ipwb ipwb index   /data/crlf_at_1k_boundary.warc.gz 
+
+#guardo el indexado 
+docker container run -it --rm -v C:\Users\Mochileiros\Desktop:/data oduwsdl/ipwb ipwb index  /data/crlf_at_1k_boundary.warc.gz >> myArchiveIndex.cdxj 
+
+#replay estructura
+docker container run -it --rm -v /path/to/data:/data -p 5000:5000 oduwsdl/ipwb ipwb replay /data/cdxj/custom.cdxj
+
+#hago replay
+docker container run -it --rm -v C:\Users\Mochileiros\Desktop:/data -p 5000:5000 oduwsdl/ipwb ipwb replay /data/myArchiveIndex.cdxj 
+

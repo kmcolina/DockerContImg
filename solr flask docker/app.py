@@ -4,7 +4,7 @@ import simplejson
 
 app = Flask(__name__)
 
-BASE_PATH='http://solr:8983/solr/demo/select?wt=json&df=name&rows=250&q='
+BASE_PATH='http://localhost:8983/solr/demo/select?wt=json&df=name&rows=250&q='
 
 @app.route('/', methods=["GET","POST"])
 def index():

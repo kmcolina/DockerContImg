@@ -1,0 +1,9 @@
+
+docker compose up
+
+docker exec -it  solr-1  bin/solr create_collection -c demo -shards 3 -replicationFactor 2
+
+docker exec -it solr-1 post -c demo example/exampledocs/manufacturers.xml
+
+#iniciar flask
+python app.py

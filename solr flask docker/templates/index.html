@@ -31,24 +31,37 @@
         <table class="table">
           <thead>
             <tr>
-              <th>ID</th>
-              <th>Name</th>
-              <th>In Stock?</th>
-              <th>Price</th>
+              <th>id</th>
+              <th>compName_s</th>
+              <th>address_s</th>
+              <th>version</th>
             </tr>
           </thead>
           <tbody>
             {% for document in results %}
               <tr>
                 <td>{{ document['id'] }}</td>
-                <td>{% if document['name'] %}{{ document['name'][0] }}{% endif %}</td>
-                <td>{% if document['inStock']%}{{ document['inStock'][0] }}{% endif %}</td>
-                <td>{% if document['price']%}${{ document['price'][0] }}{% endif %}</td>
+                <td>{% if document['compName_s'] %}{{ document['compName_s'] }}{% endif %}</td>
+                <td>{% if document['address_s']%}{{ document['address_s'] }}{% endif %}</td>
+                <td>{% if document['_version_']%}{{ document['_version_'] }}{% endif %}</td>
               </tr>
             {% endfor %}
           </tbody>
         </table>
       {% endif %}
+      {% if results and results|length == 0 %}
+      <table class="table">
+        <thead>
+          <tr>
+            <th>id</th>
+            <th>compName_s</th>
+            <th>address_s</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+
+      </table>
+    {% endif %}
     </div>
   </body>
 </html>

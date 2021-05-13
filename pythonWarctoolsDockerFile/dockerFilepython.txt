@@ -21,11 +21,9 @@ RUN pip install warctools
 COPY my_script.py /
 
 
-
-#jcutar
-    docker build -t hello-demo .
-    docker images
-    docker run  hello-demo 
+pasos
+docker build -t  python-Warctools:latest .
+docker run  python-Warctools 
 
  ##### nota
     si da error el build cambiar en la conf de engine  de true a  false; "buildkit": false
