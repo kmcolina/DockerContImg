@@ -20,3 +20,8 @@ docker container run -it --rm -v /path/to/data:/data -p 5000:5000 oduwsdl/ipwb i
 #hago replay
 docker container run -it --rm -v C:\Users\Mochileiros\Desktop:/data -p 5000:5000 oduwsdl/ipwb ipwb replay /data/myArchiveIndex.cdxj 
 
+
+WEB-20130606120709793-00000-1689_menorz_8443.warc.gz
+
+docker container run -it --rm -v C:\Users\Mochileiros\Desktop:/data oduwsdl/ipwb ipwb index  /data/WEB-20130606120709793-00000-1689_menorz_8443.warc.gz >> myArchiveIndex8443.cdxj 
+
