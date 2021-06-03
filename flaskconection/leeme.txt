@@ -1,0 +1,6 @@
+Este archivo ejecuta flask  en el puerto localhost:5000 para realizar consultas en solrCloud
+
+para iniciar el contenedor hacer docker compose up 
+
+palabras de prueba: *:*
+resultado de ejecucion: exitoso

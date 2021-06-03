@@ -1,0 +1,49 @@
+#docker-compose solr and flask
+
+
+docker build -t solrcloudpy:latest .
+pasos
+docker build -t flask-app81:latest .
+
+docker build -t flask-app:latest .
+
+
+docker image ls flask-app
+docker-compose up
+
+ir a 
+
+flask
+http://localhost:5000
+
+solr
+http://localhost:8983
+
+
+docker exec -it  solr-1  bin/solr delete -help
+
+docker run -it flask-app81 ./app.py
+
+http://localhost:8983/solr/#/
+
+BASE_PATH='http://localhost:8983/solr'
+query = "*:*"
+connection = urlopen("{}{}".format(BASE_PATH, query))
+response = simplejson.load(connection)
+print (response['response']['numFound'], "documents found.")
+
+connection = urlopen('http://solr:8983/solr/demo/select?q=*%3A*&wt=json')
+
+
+connection = urlopen('http://solr:8983/solr/')
+
+
+docker exec -it  solr-1  bin/solr create_collection -c demo -shards 3 -replicationFactor 2
+
+docker exec -it solr-1 post -c demo example/exampledocs/manufacturers.xml
+
+
+docker run -d -p 5000:5000 flask-app ./app.py
+
+#funciona el flask con 
+connection = urlopen('http://solr-1:8983/solr/demo/select?q=*%3A*')
