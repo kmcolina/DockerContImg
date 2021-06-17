@@ -1,0 +1,74 @@
+warctools retorno de cada funcion
+
+usando dump 
+
+el primero es la informacion del warc en general
+
+    archive record at elwarmanzana.warc:0
+    Headers:
+            WARC-Type:warcinfo
+            WARC-Date:2021-03-24T18:00:09Z
+            WARC-Filename:20210324180009362.warc
+            WARC-Record-ID:<urn:uuid:65524e21-0866-9ebd-f732-f89758461caf>
+            Content-Type:application/warc-fields
+            Content-Length:457
+    Content Headers:
+            Content-Type : application/warc-fields
+            Content-Length : 457
+    Content:
+            bla bla bla 
+
+los que son request 
+    archive record at elwarmanzana.warc:691
+    Headers:
+            WARC-Type:request
+            WARC-Target-URI:https://es.wikipedia.org/wiki/Manzana
+            WARC-Date:2021-03-24T18:00:09Z
+            WARC-Concurrent-To:<urn:uuid:66ef46d5-ed73-cb44-007e-1c37ac090fa1>
+            WARC-Record-ID:<urn:uuid:a44411cf-f091-6049-91c9-42b74a7ed758>
+            Content-Type:application/http; msgtype=request
+            Content-Length:324
+    Content Headers:
+            Content-Type : application/http; msgtype=request
+            Content-Length : 324
+    Content:
+            GET /wiki/Manzana HTTP/1\x2E1\xD\xAsec\x2Dch\x2Dua\x3A \x22Google Chrome\x22\x3Bv\x3D\x2289\x22\x2C \x22Chromium\x22\x3Bv\x3D\x2289\x22\x2C \x22\x3BNot A Brand\x22\x3Bv\x3D\x2299\x22\xD\xAAccept\x3A text/plain\x2C \x2A/\x2A\x3B q\x3D0\x2E01\xD\xAX\x2DRequested\x2DWith\x3A XMLHttpRequest\xD\xAsec\x2Dch\x2Dua\x2Dmobile\x3A \x3F0\xD\xAUser\x2DAgent\x3A Mozilla/5\x2E0 \x28Windows NT 10\x2E0\x3B Win64\x3B x64\x29 AppleWebKit/537\x2E36 \x28KHTML\x2C like Gecko\x29 Chrome/89\x2E0\x2E4389\x2E90 Safari/537\x2E36\xD\xA\xD\xA
+
+loa que son metadata
+
+archive record at elwarmanzana.warc:1344
+    Headers:
+            WARC-Type:metadata
+            WARC-Target-URI:https://es.wikipedia.org/wiki/Manzana
+            WARC-Date:2021-03-24T18:00:09Z
+            WARC-Concurrent-To:<urn:uuid:dddc4ba2-c1e1-459b-8d0d-a98a20b87e96>
+            WARC-Record-ID:<urn:uuid:6fef2a49-a9ba-4b40-9f4a-5ca5db1fd5c6>
+            Content-Type:application/warc-fields
+            Content-Length:109569
+    Content Headers:
+            Content-Type : application/warc-fields
+            Content-Length : 109569
+    Content:
+            outlink\x3A https\x3A//es\x2Ewikipedia\x2Eorg/wiki/Manzana/upload\x2Ewikimedia\x2Eorg/wikipedia/commons/thumb/5/53/Owoce_Jab\x25C5\x2582ko\x2Ejpg/251px\x2DOwoce_Jab\x25C5\x2582ko\x2Ejpg E \x3DEMBED_MISC\xD\xAoutlink\x3A https\x3A//es\x2Ewikipedia\x2Eorg/wiki/Manzana/upload\x2Ewikimedia\x2Eorg/wikipedia/commons/thumb/a/a9/Pomological_Watercolor_POM00001926\x2Ejpg/220px\x2DPomological_Watercolor_POM00001926\x2Ejpg E \x3DEMBED_MISC\xD\xAoutlink\x3A https\x3A//es\x2Ewikipedia\x2Eorg/wiki/Manzana/upload\x2Ewikimedia\x2Eorg/wikipedia/commons/thumb/c/cc/Tellissaare\x2EJPG/220px\x2DTellissaare\x2EJPG E \x3DEMBED_MISC\xD\xAoutlink\x3A https\x3A//es\x2Ewikipedia\x2Eorg/wiki/Manzana/upload\x2Ewikimedia\x2Eorg/wikipedia/commons/thumb/a/a0/Lucas_Cranach_\x2528I\x2529_\x2D_Adam_and_Eve\x2DParadise_\x2D_Kunsthistorisches_Museum_\x2D_Detail_Tree_of_Knowledge\x2Ejpg/220px\x2DLucas_Cranach_\x2528I\x2529_\x2D_Adam_and_Eve\x2DParadise_\x2D_Kunsthistorisches_Museum_\x2D_Detail_Tree_of_Knowledge\x2Ejpg E \x3DEMBED_MISC\xD\xAoutlink\x3A https\x3A//es\x2Ewikipedia\x2Eorg/wiki/Manzana/upload\x2Ewikimedia\x2Eorg/wikipedia/commons/thumb/4/4d/Hercules_Musei_Capitolini_MC1265_n2\x2Ejpg/220px\x2DHercules_Musei_Capitolini_MC1265_n2\x2Ejpg E \x3DEMBE
+            ...
+
+los que son response 
+
+archive record at elwarmanzana.warc:589069
+    Headers:
+            WARC-Type:response
+            WARC-Target-URI:https://www.google.com/complete/search?q=warctools%20read%20file&cp=4&client=gws-wiz&xssi=t&gs_ri=gws-wiz&hl=es-419&authuser=0&pq=warc%20tools%20read%20file&psi=4ntbYNOQBKCTwbkPpNyAkAI.1616608228413&dpr=1
+            WARC-Date:2021-03-24T18:00:09Z
+            WARC-Record-ID:<urn:uuid:6fee3664-de15-ff11-998b-f32cfc4ca02d>
+            Content-Type:application/http; msgtype=response
+            Content-Length:548
+    Content Headers:
+            Content-Type : application/http; msgtype=response
+            Content-Length : 548
+    Content:
+            HTTP/1\x2E1 200\xD\xAdate\x3A Wed\x2C 24 Mar 2021 17\x3A56\x3A19 GMT\xD\xAexpires\x3A Wed\x2C 24 Mar 2021 17\x3A56\x3A19 GMT\xD\xAcache\x2Dcontrol\x3A private\x2C max\x2Dage\x3D3600\xD\xAcontent\x2Dtype\x3A application/json\x3B charset\x3DUTF\x2D8\xD\xAstrict\x2Dtransport\x2Dsecurity\x3A max\x2Dage\x3D31536000\xD\xAcontent\x2Ddisposition\x3A attachment\x3B filename\x3D\x22f\x2Etxt\x22\xD\xAcontent\x2Dencoding\x3A br\xD\xAserver\x3A gws\xD\xAx\x2Dxss\x2Dprotection\x3A 0\xD\xAx\x2Dframe\x2Doptions\x3A SAMEORIGIN\xD\xAalt\x2Dsvc\x3A h3\x2D29\x3D\x22\x3A443\x22\x3B ma\x3D2592000\x2Ch3\x2DT051\x3D\x22\x3A443\x22\x3B ma\x3D2592000\x2Ch3\x2DQ050\x3D\x22\x3A443\x22\x3B ma\x3D2592000\x2Ch3\x2DQ046\x3D\x22\x3A443\x22\x3B ma\x3D2592000\x2Ch3\x2DQ043\x3D\x22\x3A443\x22\x3B ma\x3D2592000\x2Cquic\x3D\x22\x3A443\x22\x3B ma\x3D2592000\x3B v\x3D\x2246\x2C43\x22\xD\xA\xD\xA\xD\xAundefined
+            ...
+
+
+
+            application/http
